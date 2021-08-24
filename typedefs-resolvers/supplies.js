@@ -2,19 +2,17 @@ const { gql } = require('apollo-server')
 const dbWorks = require('../dbWorks')
 
 const typeDefs = gql`
-    type Equipment {
+    type Supply {
         id: String
-        used_by: String
-        count: Int
-        new_or_used: String
+        team: Int
     }
 `
 const resolvers = {
     Query: {
-        equipments: (parent, args) => dbWorks.getEquipments(args),
+        supplies: (parent, args) => dbWorks.getSupplies(args),
     },
     Mutation: {
-        deleteEquipment: (parent, args) => dbWorks.deleteItem('equipments', args),
+        deleteSupply: (parent, args) => dbWorks.deleteSupply('supplies', args),
     }
 }
 
