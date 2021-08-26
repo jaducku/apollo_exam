@@ -5,6 +5,9 @@ const enums = require('./typedefs-resolvers/_enums')
 const equipments = require('./typedefs-resolvers/equipments')
 const supplies = require('./typedefs-resolvers/supplies')
 const givens = require('./typedefs-resolvers/givens')
+const tools = require('./typedefs-resolvers/tools')
+const softwares = require('./typedefs-resolvers/softwares')
+const people = require('./typedefs-resolvers/people')
 
 const typeDefs = [
   queries,
@@ -12,13 +15,19 @@ const typeDefs = [
   enums,
   equipments.typeDefs,
   supplies.typeDefs,
-  givens.typeDefs
+  givens.typeDefs,
+  tools.typeDefs,
+  softwares.typeDefs,
+  people.typeDefs
 ]
 
 const resolvers = [
   equipments.resolvers,
   supplies.resolvers,
-  givens.resolvers
+  givens.resolvers,
+  tools.resolvers,
+  softwares.resolvers,
+  people.resolvers
 ]
 
 const server = new ApolloServer({ typeDefs, resolvers })
