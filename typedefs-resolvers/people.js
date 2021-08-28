@@ -21,7 +21,7 @@ const typeDefs = gql`
         sex: Sex!
         blood_type: BloodType!
         serve_years: Int!
-        role: Role!
+        role: String!
         team: ID!
         from: String!
     }

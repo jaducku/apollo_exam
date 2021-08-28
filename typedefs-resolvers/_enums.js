@@ -11,11 +11,6 @@ const typeDefs = gql`
         AB
         O
     }
-    enum Role {
-        developer
-        designer
-        planner
-    }
     enum NewOrUsed {
         new
         used

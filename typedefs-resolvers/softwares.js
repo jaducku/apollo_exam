@@ -4,7 +4,7 @@ const dbWorks = require('../dbWorks')
 const typeDefs = gql`
     type Software implements Tool{
         id: ID!
-        used_by: Role!
+        used_by: String!
         developed_by: String!
         description: String
     }

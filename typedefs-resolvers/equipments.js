@@ -4,13 +4,13 @@ const dbWorks = require('../dbWorks')
 const typeDefs = gql`
     type Equipment implements Tool{
         id: ID!
-        used_by: Role!
+        used_by: String!
         count: Int
         new_or_used: NewOrUsed!
     }
     type EquipmentAdv {
         id: ID!
-        used_by: Role!
+        used_by: String!
         count: Int!
         use_rate: Float
         is_new: Boolean
