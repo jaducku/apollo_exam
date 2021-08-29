@@ -20,7 +20,8 @@ const typeDefs = gql`
             page: Int!,
             per_page: Int!
         ): [People]
-        roles: [Role]
+        roles: [Role],
+        teams: [Team]
     }
 `
 
