@@ -10,6 +10,7 @@ const softwares = require('./typedefs-resolvers/softwares')
 const people = require('./typedefs-resolvers/people')
 const roles = require('./typedefs-resolvers/roles')
 const teams = require('./typedefs-resolvers/teams')
+const elm_part_std = require('./typedefs-resolvers/elm_part_std')
 
 const typeDefs = [
   queries,
@@ -22,7 +23,8 @@ const typeDefs = [
   softwares.typeDefs,
   people.typeDefs,
   roles.typeDefs,
-  teams.typeDefs
+  teams.typeDefs,
+  elm_part_std.typeDefs
 ]
 
 const resolvers = [
@@ -33,7 +35,8 @@ const resolvers = [
   softwares.resolvers,
   people.resolvers,
   roles.resolvers,
-  teams.resolvers
+  teams.resolvers,
+  elm_part_std.resolvers
 ]
 
 const server = new ApolloServer({ typeDefs, resolvers })

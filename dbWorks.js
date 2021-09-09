@@ -118,6 +118,8 @@ const dbWorks = {
     getSoftwares: (args) => dataFiltered('softwares', args),
 
     getSupplies: (args) => dataFiltered('supplies', args),
+    
+    getElmPartStds: (args) => dataFiltered('elm_part_std',args),
 }
 
 module.exports = dbWorks

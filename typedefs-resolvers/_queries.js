@@ -21,7 +21,8 @@ const typeDefs = gql`
             per_page: Int!
         ): [People]
         roles: [Role],
-        teams: [Team]
+        teams: [Team],
+        elm_part_std: [ELM_PART_STD]
     }
 `
 
